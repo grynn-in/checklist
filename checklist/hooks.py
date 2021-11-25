@@ -89,13 +89,12 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Checklist": {
+		"on_update": "checklist.events.checklist.do_update",
+		"validate": "checklist.events.checklist.do_validate",
+	}
+}
 
 # Scheduled Tasks
 # ---------------

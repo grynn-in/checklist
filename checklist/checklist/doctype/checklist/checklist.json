@@ -12,7 +12,8 @@
   "due_date",
   "section_break_4",
   "description",
-  "csv_file"
+  "csv_file",
+  "amended_from"
  ],
  "fields": [
   {
@@ -44,11 +45,21 @@
    "fieldname": "csv_file",
    "fieldtype": "Attach",
    "label": "CSV File"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Checklist",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2021-11-24 19:52:56.069020",
+ "modified": "2021-11-25 14:40:32.610525",
  "modified_by": "Administrator",
  "module": "Checklist",
  "name": "Checklist",
