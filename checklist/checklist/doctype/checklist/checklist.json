@@ -13,7 +13,8 @@
   "section_break_4",
   "description",
   "csv_file",
-  "amended_from"
+  "amended_from",
+  "new_field"
  ],
  "fields": [
   {
@@ -54,12 +55,17 @@
    "options": "Checklist",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "new_field",
+   "fieldtype": "Data",
+   "label": "New Field"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-11-25 14:40:32.610525",
+ "modified": "2021-11-25 16:39:41.306891",
  "modified_by": "Administrator",
  "module": "Checklist",
  "name": "Checklist",

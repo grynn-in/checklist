@@ -12,8 +12,8 @@ class Checklist(Document):
 		validate data
 		"""
 		# if len(self.description) > 10 : 
-		# 	frappe.log_error("Description length > 10 characters")
-		# 	frappe.throw("Description length > 10 characters")  # ends execution
+		# frappe.log_error("Description length > 10 characters")
+		# frappe.throw("Description length > 10 characters")  # ends execution
 		pass
 
 	def before_insert(self):  
