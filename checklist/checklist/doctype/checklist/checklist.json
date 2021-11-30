@@ -14,7 +14,8 @@
   "description",
   "csv_file",
   "amended_from",
-  "new_field"
+  "new_field",
+  "new_new"
  ],
  "fields": [
   {
@@ -60,12 +61,17 @@
    "fieldname": "new_field",
    "fieldtype": "Data",
    "label": "New Field"
+  },
+  {
+   "fieldname": "new_new",
+   "fieldtype": "Data",
+   "label": "New New xxx"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-11-25 16:39:41.306891",
+ "modified": "2021-11-26 16:19:03.731797",
  "modified_by": "Administrator",
  "module": "Checklist",
  "name": "Checklist",
