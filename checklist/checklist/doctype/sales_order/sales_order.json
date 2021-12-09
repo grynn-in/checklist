@@ -8,10 +8,13 @@
  "engine": "InnoDB",
  "field_order": [
   "sales_order_number",
+  "delivery_date",
   "section_break_2",
   "sales_order_items",
   "header_section",
-  "grand_totals"
+  "grand_totals",
+  "list_of_item_names",
+  "amended_from"
  ],
  "fields": [
   {
@@ -23,8 +26,7 @@
    "fieldname": "sales_order_items",
    "fieldtype": "Table",
    "label": "Sales Order Items",
-   "options": "Sales Order Items",
-   "reqd": 1
+   "options": "Sales Order Items"
   },
   {
    "fieldname": "header_section",
@@ -39,14 +41,35 @@
   {
    "fieldname": "section_break_2",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date"
+  },
+  {
+   "fieldname": "list_of_item_names",
+   "fieldtype": "Text",
+   "label": "List of Item Names"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sales Order",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2021-12-01 14:56:35.059604",
+ "modified": "2021-12-09 18:46:58.812023",
  "modified_by": "Administrator",
  "module": "Checklist",
  "name": "Sales Order",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
