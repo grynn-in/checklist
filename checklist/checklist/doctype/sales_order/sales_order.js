@@ -21,7 +21,14 @@ frappe.ui.form.on('Sales Order', {
 			// set grand total 
 			frm.set_value('grand_totals', total)
 
+			// set status and priority as read_only
+			// if user does not have System Manager role
+			let is_allowed = frappe.user_roles.includes('System Manager');		
+			frm.toggle_enable(['grand_totals'], total > 10000);
+			frm.toggle_display(['grand_totals'], total < 1000);
+
 		}
+
 		// here you can add the methods to concatenate
 		frm.concate_item_names = frm => {
 			// console.log (frm)
@@ -126,6 +133,11 @@ frappe.ui.form.on('Sales Order', {
 
 		frm.refresh_field('sales_order_items')
 
+		if (frm.doc.delivery_date < frappe.datetime.now_date()) {
+			frappe.msgprint("Date Passed")
+		}
+
+
 	}
 });
 
@@ -171,11 +183,3 @@ frappe.ui.form.on('Sales Order Items', {
 	},
 })
 
-// frappe.call({
-// 	// method: "frappe.core.doctype.user.user.get_all_roles", //dotted path to server method
-// 	method: "checklist.checklist.doctype.sales_order.sales_order.add", //dotted path to server method
-// 	args : {"a" : 2, "b": 3},
-// 	callback: function(r) {
-// 		// code snippet
-// 	}
-// })

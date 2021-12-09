@@ -14,7 +14,8 @@
   "header_section",
   "grand_totals",
   "list_of_item_names",
-  "amended_from"
+  "amended_from",
+  "note"
  ],
  "fields": [
   {
@@ -60,12 +61,18 @@
    "options": "Sales Order",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "label": "Note",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-12-09 18:46:58.812023",
+ "modified": "2021-12-09 19:45:06.066596",
  "modified_by": "Administrator",
  "module": "Checklist",
  "name": "Sales Order",
