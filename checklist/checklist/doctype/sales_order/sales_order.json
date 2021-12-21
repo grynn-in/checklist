@@ -7,18 +7,13 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "sales_order_number",
   "section_break_2",
   "sales_order_items",
   "header_section",
-  "grand_totals"
+  "grand_totals",
+  "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "sales_order_number",
-   "fieldtype": "Data",
-   "label": "Sales Order Number"
-  },
   {
    "fieldname": "sales_order_items",
    "fieldtype": "Table",
@@ -39,14 +34,25 @@
   {
    "fieldname": "section_break_2",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sales Order",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2021-12-01 14:56:35.059604",
+ "modified": "2021-12-16 00:28:24.531039",
  "modified_by": "Administrator",
  "module": "Checklist",
  "name": "Sales Order",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -59,9 +65,11 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }
