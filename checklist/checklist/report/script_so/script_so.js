@@ -13,7 +13,7 @@ frappe.query_reports["script SO"] = {
 			"reqd": 0,
 		},
 		{
-			"fieldname": "creation",
+			"fieldname": "creation_from",
 			"label": __("From Date"),
 			"fieldtype": "Date",
 			"width": 80,
@@ -21,7 +21,7 @@ frappe.query_reports["script SO"] = {
 			"default":dateutil.month_start()
 		},
 		{
-			"fieldname": "creation",
+			"fieldname": "creation_to",
 			"label": __("To Date"),
 			"fieldtype": "Date",
 			"width": 80,
@@ -33,11 +33,10 @@ frappe.query_reports["script SO"] = {
 			"label": __("Status"),
 			"fieldtype": "Select",
 			"default": "",
-			"options": ['', 'Sale', 'Rent', 'Lease'],
+			"options": ['', 'Draft', 'Submitted', 'Cancelled'],
 			"width": 100,
 			"reqd": 0,
 		}
-
 	]
 };
 

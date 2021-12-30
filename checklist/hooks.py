@@ -32,6 +32,9 @@ app_license = "MIT"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+	"Note" : "public/js/doctype/note.js"
+	}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -88,11 +91,15 @@ app_license = "MIT"
 # Document Events
 # ---------------
 # Hook on document methods and events
-
+# Extend
 doc_events = {
 	"Checklist": {
 		"on_update": "checklist.events.checklist.do_update",
 		"validate": "checklist.events.checklist.do_validate",
+	}, 
+	"Note" : {
+		"after_insert" : "checklist.events.note.after_insert"
+
 	}
 }
 
