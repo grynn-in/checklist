@@ -6,30 +6,29 @@
 
 {% block page_content %}
 
-<!-- about.html -->
-<h1>{{ _("About Us") }}</h1>
+      <!-- about.html -->
+      <h1>{{ _("About Us") }}</h1>
 
-<!-- data injector coming from the python file-->
-<h1>{{ _( about_us) }}</h1>
+      <!-- data injector coming from the python file-->
+      <h1>{{ _( about_us) }}</h1>
 
-<!-- data injector coming from the python file-->
-{% for i in people %}
-  <li> {{ i }} </li>
-{% endfor  %}
+      <!-- data injector coming from the python file-->
+      {% for i in people %} 
+      {% endfor  %}
 
-
-<!-- data injector coming from the python file-->
-{% for i in sales_order %}
-  <li>  {{ i.name  }} - {{ i.grand_totals}} </li>
-{% endfor  %}
-
-<div class="row">
-    <div class="col-sm-6">
-        We believe that great companies are driven by excellence,
-        and add value to both its customers and society.
-        You will find our team embibes these values.
-    </div>
-</div>
+      <!-- data injector coming from the python file-->
+      {% for i in sales_order %}
+      <div class="row">
+        <div class="col-sm-6">
+            We believe that great companies are driven by excellence,
+            and add value to both its customers and society.
+            You will find our team embibes these values.
+        </div>
+        <div class="col-sm-2"> 
+          <li>  {{ i.name  }} - {{ i.grand_totals}} </li>
+        </div>
+      </div>
+      {% endfor  %}
 
 <!-- <script src="/test/index.js"> </script> -->
 
