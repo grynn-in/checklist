@@ -11,7 +11,8 @@
   "sales_order_items",
   "header_section",
   "grand_totals",
-  "amended_from"
+  "amended_from",
+  "comments"
  ],
  "fields": [
   {
@@ -43,12 +44,17 @@
    "options": "Sales Order",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Data",
+   "label": "Comments"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-12-16 00:28:24.531039",
+ "modified": "2022-01-05 19:39:51.163166",
  "modified_by": "Administrator",
  "module": "Checklist",
  "name": "Sales Order",
